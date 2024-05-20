@@ -1,2 +1,2 @@
-# jeremypredding.github.io
-CFD Research by Jeremy Redding
+# Jeremy Redding Research Page
+
