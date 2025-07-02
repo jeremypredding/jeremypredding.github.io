@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Jeremy Redding</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- optional Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- MathJax config -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer id="MathJax-script"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <style>
+    /* minimal overrides for this page */
+    .sidebar { width:200px; float:left; padding:2rem; background:#f7f7f7; height:100vh; box-sizing:border-box; }
+    .main    { margin-left:220px; padding:2rem; }
+    .paper-grid { display:grid; gap:2rem; }
+    .paper-card {
+      position: relative;
+      background:#fff; padding:1.5rem; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+    /* Cover image styling */
+.cover-image {
+  /* Use the custom property, falling back to 100% */
+  width: var(--cover-width, 90%);
+  max-width: var(--cover-width, 90%);
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    .paper-card h2 { margin-top:0.5rem; font-size:1.1rem; }
+    .paper-card h2 a { color: inherit; text-decoration: none; }
+    .authors     { margin:0.25rem 0 0.5rem; color:#666; font-style:italic; font-size:0.95rem; }
+    .citations   { margin:0.25rem 0 1rem; color:#444; font-size:0.9rem; font-style:italic; }
+    .math-example {
+      margin-top:0.75rem; padding:0.6rem; background:#f0f3f8;
+      border-left:4px solid #005f73; font-family:monospace;
+    }
+    footer { margin-top:3rem; font-size:0.8rem; color:#888; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1>Jeremy Redding Research</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <h1>Publications</h1>
+    <div class="paper-grid">
+
+      <!-- 2024 Paper with cover -->
+      <div class="paper-card" data-year="2024" data-doi="10.48550/arXiv.2405.17671">
+        <h2>
+          <a href="https://doi.org/10.48550/arXiv.2405.17671" target="_blank">
+            2024 — High fidelity simulations of unstart phenomena in a scramjet inlet due to angle of attack
+          </a>
+        </h2>
+        <p class="authors">Loading authors…</p>
+        <p class="citations">Loading citations…</p>
+        <p>     This work investigates the unsteady behavior of unstart phenomena within a scramjet inlet using advanced computational techniques. Scramjets and ramjets, with their reliance on inlet compression, offer promising airbreathing propulsion for hypersonic regimes. This research focuses on understanding and modeling the onset of unstart phenomena in supersonic inlets, a critical step towards developing mitigation strategies. These strategies have the potential to improve engine efficiency, range, and maneuverability of hypersonic vehicles. To achieve this, the state-of-the-art compressible flow solver, Eilmer, is used to simulate shockwave behavior within the inlet/isolator of a planar scramjet characterized experimentally at North Carolina State University (NCSU). Baseline comparisons are presented with the wind tunnel experiments via the shock structures present within the isolator section conducted at Mach 3.9 on a 3D scramjet inlet model. Simulations are then carried out at varying angles of attack (0 to 10 deg) and multiple pitch rates (10 deg/sec and 100 deg/sec) to demonstrate the shock train inertial response and to characterize unstart onset. In both cases the timing of inlet unstart is observed to correlate well with the rapid surge in exit pressure as well as shock detachment at the lower leading edge region. Lastly, exit pressures are significantly higher in the 10 deg/s case than in that of the 100 deg/s case at the same angle of attack. These observations suggest that unstart is not only dependent on angle of attack but also on AoA pitch rate. The findings provide valuable insights into the unsteady flow behavior during hypersonic inlet unstart, with potential applications for unstart detection at high angles of attack. </p>
+        <!-- <div class="math-example">
+          $$\tau = \frac{L}{U}$$
+        </div> -->
+      </div>
+
+      <!-- 2024 Paper without cover -->
+      <div class="paper-card" data-year="2024" data-doi="10.48550/arXiv.2405.15875">
+        <h2>
+          <a href="https://doi.org/10.48550/arXiv.2405.15875" target="_blank">
+            2024 — Analysis of thermochemical non-equilibrium hypersonic flow over a waverider with uncertainty quantification
+          </a>
+        </h2>
+        <p class="authors">Loading authors…</p>
+        <p class="citations">Loading citations…</p>
+        <p>     The objective of this work is to assess the impact of parameter uncertainty on hypersonic aerothermal surface heating predictions in Reynolds-Averaged Navier-Stokes (RANS) simulations using non-intrusive uncertainty quantification (UQ) techniques. RANS-based models are considered indispensable tools in computational fluid dynamics (CFD) analysis for the iterative and cost-effective exploration of innovative design concepts. However, these RANS models heavily rely on empirical constants that often require tuning due to the lack of physical knowledge and complexity of the problem, introducing significant uncertainties that hinder their predictive capabilities. Therefore, this research investigates the influence of the turbulent Prandtl number uncertainty, that governs the level of shear stress and heat flux present in the turbulent flow, on key output quantities of interest (QoIs). The US3D hypersonics solver is employed to simulate aeroheating over a hypersonic waverider configuration using the classical Menter Shear Stress Transport (SST) turbulence model. A polynomial chaos expansion (PEC) framework is presented that enables a global sensitivity analysis and forward propagation of uncertainty for a range of turbulent prandtl number, generating statistics including skewness and kurtosis of the QoIs. In addition, Sobol indices are calculated to quantify the relative contribution of the turbulent prandtl number to the overall uncertainty in the heat flux and surface pressure outputs. The results provide valuable insights into the underlying aeroheating behavior in RANS simulations under hypersonic non-equilibrium flow conditions over a waverider previously studied at the Arnold Engineering Development Center (AEDC) facility. These findings will inform future design processes and improve the reliability of RANS-based predictions in hypersonic applications. </p>
+        <!--<div class="math-example">
+          $$\Phi(\xi) = \sum_{i=0}^P a_i\,\Psi_i(\xi)$$
+        </div> -->
+      </div>
+
+      <!-- 2025 Paper with cover -->
+      <div class="paper-card" data-year="2025" data-doi="10.1063/5.0271076" data-cover="img/coverimage.svg">
+        <h2>
+          <a href="https://doi.org/10.1063/5.0271076" target="_blank">
+            2025 — Investigation of scramjet inlet unstart/restart behavior induced by high angle of attack and dynamic isolator camber motion
+          </a>
+        </h2>
+        <p class="authors">Loading authors…</p>
+        <p class="citations">Loading citations…</p>
+        <p>This study employs high-fidelity simulations, benchmarked with wind tunnel experiments at Mach 3.9, to investigate how pitching maneuvers influence unstart in a planar scramjet inlet with a Mach 2.5 shock-on-lip design and a contraction ratio of 2.14. Simulations utilize the Spalart–Allmaras unsteady Reynolds-averaged Navier–Stokes turbulence model to analyze unstart onset across two pitch rates (10°/s and 100°/s) over an AoA (angle of attack) range of 0°to 10°. Results indicate that unstart onset correlates with a rapid rise in exit pressure and shock detachment along the lower leading edge, with lower pitch rates producing significantly higher exit pressures. These findings highlight the sensitivity of inlet stability to the transient aerodynamics of the pitching maneuvers. A dynamic adjustment of the isolator area is introduced just before the unstart onset to evaluate the potential of this approach for unstart mitigation. This strategy enabled shock reformation and direct regulation of outlet pressure, demonstrating the potential for variable-camber inlet-isolator systems in maintaining performance under off-design conditions. In addition to physical observations, an analytical approach is presented to predict the re-acceleration of the flow due to the time rate of change of area in the isolator. An excellent alignment between the analytical equation and the simulated results is observed, indicating a useful relation for insight into inlet/isolator unstart–restart behavior, with application to future wind tunnel tests, control theory implementation, and maneuver limit studies.</p>
+        <!-- <div class="math-example">
+          $$C_p = \frac{dQ}{dT}$$
+        </div> -->
+      </div>
+
+      <!-- 2021 Paper without cover -->
+      <div class="paper-card" data-year="2021" data-doi="10.1016/j.ijheatmasstransfer.2021.122345">
+        <h2>
+          <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2021.122345" target="_blank">
+            2021 — A computational study on shock-induced deformation, fragmentation and vaporization of volatile liquid fuel droplets
+          </a>
+        </h2>
+        <p class="authors">Loading authors…</p>
+        <p class="citations">Loading citations…</p>
+        <p>This study investigates the fundamental mechanisms underlying the deformation, fragmentation, and vaporization of volatile liquid fuel droplets impacted by a normal shock wave using a high-fidelity, VOF-DIM (volume of fluid - diffuse interface method)-based framework. The theoretical and mathematical formulation of this multiphase, multi-fluid problem is based on a modified 5-equation Kapila formulation with pressure-relaxation, viscous, and surface tension effects. A thermal-mechanical-chemical equilibrium relaxation procedure is implemented to simulate vaporization. The framework is first validated against measurements of shock impact on a non-vaporizing water droplet; the computations agree well with the experimental data. Next, the vaporization model is validated against the law, showing excellent agreement. This is followed by a systematic investigation of the atomization and vaporization physics of a n-dodecane droplet as it interacts with a shock wave traveling at a Mach number of 6.5. To compare and contrast the effect of vaporization on breakup physics, two numerical experiments were conducted with and without the vaporization model. It is found that when the vaporization model is not enabled, the gaseous and liquid phase dynamics are similar to that of non-vaporizing water droplet-shock wave interactions. However, when vaporization is enabled, aerothermal heating from the shock impact and high temperatures in the post-shock region provide sufficient heating for volatile liquid droplets to undergo phase change and the breakup behaviors are significantly different from the non-vaporizing counterpart. Furthermore, it is found that vaporization is a strong function of the shock strength – low Mach number shock waves lead to higher vaporization.</p>
+        <!-- <div class="math-example">
+          $$We = \frac{\rho\,U^2\,D}{\sigma}$$
+        </div> --> 
+      </div>
+
+      <!-- 2025 Paper without cover -->
+      <div class="paper-card" data-year="2025" data-doi="10.1063/5.0263004" data-cover="img/coverimage_cav.jpg">
+        <h2>
+          <a href="https://doi.org/10.1063/5.0263004" target="_blank">
+            2025 — Vortex behavior in a dynamically moving hypersonic cavity
+          </a>
+        </h2>
+        <p class="authors">Loading authors…</p>
+        <p class="citations">Loading citations…</p>
+        <p>
+
+This paper details a study based on direct numerical simulation to investigate complex fundamental flow physics when Mach 11 flow interacts with a dynamically moving two-dimensional (2D) cavity. As a first step to understanding this phenomenon, grid motion capability is improved and verified in the computational framework that solves for thermochemical non-equilibrium processes relevant to hypersonic flow conditions. Following this, cavity motion is prescribed at a rate of 60 m/s so that the length by depth (L/D) of the cavity actively changes from an L/D of 2 to L/D of 9.8 during the simulation. It is found that in a compressive state, the cavity exhibits previously unseen behavior, including consistent shear layer detachment from the trailing edge, vortex breakdowns representative of energy cascading in turbulence, two dominant wave reflections that are sustained, and the tendency of the species to follow the vortical flow behavior due to its low relative timescale.
+</p>
+        <!-- <div class="math-example">
+          $$St = \frac{f\,L}{U} = \frac{m - \alpha}{\tfrac{1}{k_v} + M}$$
+        </div> -->
+      </div>
+
+      <!-- 2023 Paper without cover -->
+      <div class="paper-card" data-year="2023" data-doi="10.1063/5.0172435">
+        <h2>
+          <a href="https://doi.org/10.1063/5.0172435" target="_blank">
+            2023 — Thermochemical non-equilibrium hypersonic flow over a rectangular cavity embedded on a compression ramp
+          </a>
+        </h2>
+        <p class="authors">Loading authors…</p>
+        <p class="citations">Loading citations…</p>
+        <p>
+
+This paper reports a systematic computational investigation that elucidates the fundamental thermochemical non-equilibrium physics that occurs when air at Mach number of 11 encounters a rectangular cavity of aspect ratio L/D = 2.0 embedded on a 25° compression ramp. The mechanistic details of this highly complex flow phenomenon are obtained by solving the compressible form of the Navier–Stokes equations in two dimensions using a finite-volume open-source library. Chemical and thermal non-equilibrium processes are treated using a five-species, 12-reaction chemical kinetics, and a two-temperature model, respectively. Following a detailed validation and grid sensitivity study, two simulations are conducted, one with isothermal boundary conditions and the other with conjugate heat transfer (CHT) to identify the effect of energy transmission to the material on surface heat flux. Fast Fourier transforms and near-wall velocity profiles inside and in the neighborhood of the cavity are used to identify primary oscillatory modes and shear layer dynamics. Two new descriptive states defined as “states I and II,” representative of the minimum and maximum deflection of the shear layer, are used to discuss the dynamical behaviors in the cavity, including the separation region before the cavity, trailing edge effects, frequency analysis of probe data collected at several key locations, and the effect of CHT on surface heat flux. It is found that the flow features at the cavity's center strongly influence the separation upstream of the cavity, and the transrotational temperature near the cavity's trailing edge is strongly correlated with the oscillations of the shear layer.
+</p>
+        <!-- <div class="math-example">
+          $$Y_i = Y_i^0 \exp\bigl(-E_i/RT\bigr)$$
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+
+  <footer>© 2025 Jeremy Redding</footer>
+
+  <script>
+    // Sort cards by year
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.paper-grid');
+      Array.from(grid.children)
+           .sort((a,b) => parseInt(b.dataset.year) - parseInt(a.dataset.year))
+           .forEach(card => grid.appendChild(card));
+
+      // Inject optional cover images
+      document.querySelectorAll('.paper-card').forEach(card => {
+        const cover = card.dataset.cover;
+        if (cover) {
+          const img = document.createElement('img');
+          img.src = cover;
+          img.alt = 'Cover image';
+          img.className = 'cover-image';
+          card.insertBefore(img, card.firstElementChild);
+        }
+      });
+    });
+
+    // Fetch authors via CrossRef
+    async function fetchAuthors(doi) {
+      try {
+        const res = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`);
+        const msg = (await res.json()).message;
+        return (msg.author||[]).map(a => `${a.given} ${a.family}`).join(', ');
+      } catch {
+        return 'Unavailable';
+      }
+    }
+
+    // Fetch citation count via OpenAlex
+    async function fetchCitations(doi) {
+      try {
+        const res = await fetch(`https://api.openalex.org/works/doi:${encodeURIComponent(doi)}`);
+        const msg = await res.json();
+        return msg.cited_by_count ?? 0;
+      } catch {
+        return 'N/A';
+      }
+    }
+
+    // Populate authors & citations
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.paper-card').forEach(async card => {
+        const doi = card.dataset.doi;
+        card.querySelector('.authors').textContent  = 'Authors: '   + await fetchAuthors(doi);
+        card.querySelector('.citations').textContent = 'Citations: ' + (await fetchCitations(doi)).toLocaleString();
+      });
+    });
+  </script>
+
+</body>
+</html>

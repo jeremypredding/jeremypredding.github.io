@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #1a1a1a;
+  --accent: #005f73;
+  --bg: #ffffff;
+  --muted: #666666;
+  --radius: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #fafafa;
+  border-right: 1px solid #e2e2e2;
+  padding: 2rem 1rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+
+.sidebar h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.sidebar nav a {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  color: var(--accent);
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 3rem;
+}
+
+.hero h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* Publications */
+.paper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.paper-card {
+  background: none;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+.paper-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.paper-content h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.paper-content p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.math-example {
+  font-size: 0.85rem;
+  font-family: monospace;
+  margin-top: 0.5rem;
+  color: var(--accent);
+}
+
+/* Profile */
+.profile-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #eee;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-bio p {
+  margin-bottom: 1rem;
+}
+
+/* Teaching Notes */
+ul.note-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.note-list li {
+  margin-bottom: 1rem;
+}
+
+.note-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+  body {
+    flex-direction: column;
+  }
+}
+
+/* Publication‐title DOI links: remove underline & blue color */
+.paper-card h2 a {
+  color: inherit;          /* match the h2 color */
+  text-decoration: none;   /* no underline */
+}
+
+.paper-card h2 a:hover {
+  color: #005f73;          /* accent on hover */
+  text-decoration: underline;
+}
+
+/* Force all paper‐cards to span the full width */
+.paper-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;  /* single column */
+  gap: 2rem !important;
+}
+
+/* (Optional) If you ever re-enable multi-column layouts, you can force a card 
+   to span all columns with: 
+.paper-card {
+  grid-column: 1 / -1 !important;
+}
+*/
+
